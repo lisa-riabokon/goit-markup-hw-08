@@ -1,5 +1,10 @@
 .section-title {
-  @include font(36px, null, 1.17, null);
-  margin-bottom: 50px;
+  @include font(28px, 700, 1.18, null);
+  margin-bottom: 30px;
   text-align: center;
+
+  @include desktop {
+    @include font(36px, 700, 1.17, null);
+    margin-bottom: 50px;
+  }
 }

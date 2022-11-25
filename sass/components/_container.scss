@@ -7,7 +7,7 @@
   @include mobile {
     max-width: 480px;
   }
-  @include media(768px) {
+  @include tablet {
     max-width: 768px;
   }
   @include desktop {

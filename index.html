@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a href="./index.html" class="logo link" lang="en"
@@ -55,16 +55,90 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <nav>
+         <button type="button" class="menu-close">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close-mob"></use>
+          </svg>
+        </button>
+         <ul class="mob-menu-list list">
+            <li class="mob-menu-list__item">
+              <a href="./index.html" class="mob-menu-list__link link current">Студія</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a href="./portfolio.html" class="mob-menu-list__link link">Портфоліо</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a href="#" class="mob-menu-list__link link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list mob-menu-connect">
+          <li class="mob-connect__item">
+            <a class="mob-connect__link link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="mob-connect__item">
+            <a class="mob-connect__link link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+          <ul class="list mob-soc">
+                  <li class="mob-soc__item">
+                    <a
+                      href=""
+                      class="link mob-soc-link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >Instagram</a>
+                  </li>
+                  <li class="mob-soc__item">
+                    <a
+                      href=""
+                      class="link mob-soc__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Twitter</a>
+                  </li>
+                  <li class="mob-soc__item">
+                    <a
+                      href=""
+                      class="link mob-soc__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Facebook</a>
+                  </li>
+                  <li class="mob-soc__item">
+                    <a
+                      href=""
+                      class="link mob-soc__link"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </header>
 
     <main>
-      <!-- <section class="hero overlay">
+      <section class="hero overlay">
         <div class="container hero__container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="btn hero__btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
-      </section> -->
+      </section>
 
       <section class="section feature">
         <div class="container feature__container">
@@ -116,7 +190,7 @@
         </div>
       </section>
 
-      <!-- <section class="section about">
+      <section class="section about">
         <div class="container about__container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="list img-list">
@@ -140,14 +214,36 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <section class="section team">
         <div class="container team__container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="list people-list">
             <li class="people-list__item">
-              <img src="./images/1-person.jpg" alt="усміхнений хлопець в окулярах" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/1-person.jpg 1x, 
+                ./images/1-person-2x.jpg 
+                " 
+                media="(min-width: 1200px)"/>
+                <source 
+                srcset="
+                ./images/1-person-tab.jpg 1x, 
+                ./images/1-person-tab-2x.jpg 
+                " 
+                media="(min-width: 768px)"/>
+                <source 
+                srcset="
+                ./images/1-person-mob.jpg 1x, 
+                ./images/1-person-mob-2x.jpg 
+                " 
+                media="(max-width: 480px)"/>
+                <img 
+              src="./images/1-person-mob.jpg" alt="усміхнений хлопець в окулярах" width="450" />
+              </picture>
+              
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Ігор Дем'яненко</h3>
                 <p class="people-list__text" lang="en">Product Designer</p>
@@ -198,7 +294,28 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img src="./images/2-person.jpg" alt="усміхнена дівчина в окулярах" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/2-person.jpg 1x, 
+                ./images/2-person-2x.jpg 
+                " 
+                media="(min-width: 1200px)"/>
+                <source 
+                srcset="
+                ./images/2-person-tab.jpg 1x, 
+                ./images/2-person-tab-2x.jpg 
+                " 
+                media="(min-width: 768px)"/>
+                <source 
+                srcset="
+                ./images/2-person-mob.jpg 1x, 
+                ./images/2-person-mob-2x.jpg 
+                " 
+                media="(max-width: 480px)"/>
+                <img src="./images/2-person-mob.jpg" alt="усміхнена дівчина в окулярах" width="450" />
+              </picture>
+              
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Ольга Рєпіна</h3>
                 <p class="people-list__text" lang="en">Frontend Developer</p>
@@ -249,11 +366,32 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img
-                src="./images/3-person.jpg"
+              <picture>
+                <source 
+                srcset="
+                ./images/3-person.jpg 1x, 
+                ./images/3-person-2x.jpg 
+                " 
+                media="(min-width: 1200px)"/>
+                <source 
+                srcset="
+                ./images/3-person-tab.jpg 1x, 
+                ./images/3-person-tab-2x.jpg 
+                " 
+                media="(min-width: 768px)"/>
+                <source 
+                srcset="
+                ./images/3-person-mob.jpg 1x, 
+                ./images/3-person-mob-2x.jpg 
+                " 
+                media="(max-width: 480px)"/>
+                <img
+                src="./images/3-person-mob.jpg"
                 alt="усміхнений хлопець в світлій сорочці"
-                width="270"
+                width="450"
               />
+              </picture>
+              
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Микола Тарасов</h3>
                 <p class="people-list__text" lang="en">Marketing</p>
@@ -304,7 +442,29 @@
               </div>
             </li>
             <li class="people-list__item">
-              <img src="./images/4-person.jpg" alt="гарний хлопець в окулярах" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/4-person.jpg 1x, 
+                ./images/4-person-2x.jpg 
+                " 
+                media="(min-width: 1200px)"/>
+                <source 
+                srcset="
+                ./images/4-person-tab.jpg 1x, 
+                ./images/4-person-tab-2x.jpg 
+                " 
+                media="(min-width: 768px)"/>
+                <source 
+                srcset="
+                ./images/4-person-mob.jpg 1x, 
+                ./images/4-person-mob-2x.jpg 
+                " 
+                media="(max-width: 480px)"/>
+
+                <img src="./images/4-person-mob.jpg" alt="гарний хлопець в окулярах" width="450" />
+              </picture>
+              
               <div class="people-list__wrap">
                 <h3 class="people-list__title">Михайло Єрмаков</h3>
                 <p class="people-list__text" lang="en">UI Designer</p>

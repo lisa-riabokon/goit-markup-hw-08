@@ -23,19 +23,10 @@
   @extend %align-list;
   justify-content: center;
   margin-bottom: 30px;
-
-  @include tablet {
-    width: calc((100% - 30px) / 2);
-  }
-  @include desktop {
-    width: calc((100% - 90px) / 4);
-  }
 }
 
 .icons-list__title {
   @include font(14px, null, 1.14, null);
-  font-size: 14px;
-  line-height: 1.14;
   text-transform: uppercase;
 
   margin-bottom: 10px;

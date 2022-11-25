@@ -7,7 +7,8 @@
 }
 
 .menu {
-  display: flex;
+  // display: flex;
+  display: none;
   gap: 50px;
   & .link.current::after {
     content: '';
@@ -66,7 +67,8 @@
 /* header-contacts */
 
 .connect {
-  display: flex;
+  // display: flex;
+  display: none;
 }
 
 .connect__header {
@@ -77,4 +79,17 @@
 .connect__mail-icon,
 .connect__tel-icon {
   margin-right: 10px;
+}
+
+.menu-open {
+  margin-left: auto;
+}
+
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white-color);
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
