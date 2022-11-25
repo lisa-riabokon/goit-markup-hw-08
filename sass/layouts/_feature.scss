@@ -1,10 +1,18 @@
 .icons-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .icons-list__item {
-  width: 270px;
+  width: 100%;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .icons-list__area {

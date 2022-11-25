@@ -1,11 +1,19 @@
 .pic-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .pic-list__item {
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
   height: 90px;
+
+  @include tablet {
+    width: calc((100% - 60px) / 3);
+  }
+  @include desktop {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .pic-list__link {
