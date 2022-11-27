@@ -7,6 +7,12 @@
 .footer__logo {
   margin-bottom: 20px;
 }
+.footer-address {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
 
 .address {
   font-style: normal;
@@ -48,35 +54,65 @@
   text-transform: uppercase;
   font-weight: 700;
   color: var(--white-color);
+  text-align: center;
+  @include desktop {
+    text-align: start;
+  }
 }
 
 .online-form__title {
   display: block;
 }
 
-.footer-wrap {
+.footer-container {
   display: block;
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   @include desktop {
     display: flex;
     align-items: baseline;
+    text-align: start;
   }
 }
 
 .footer-social {
-  margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-left: 70px;
+  }
 }
 
 .footer-sign-up {
-  margin-left: auto;
+  @include tablet {
+    margin-top: 60px;
+  }
+  @include desktop {
+    margin-left: auto;
+  }
 }
 
 .wrap-input {
-  display: flex;
+  display: block;
+  @include desktop {
+    display: flex;
+  }
 }
 
 .online-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
+
+  margin-bottom: 20px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -85,7 +121,6 @@
   padding: 15px 16px;
   outline: transparent;
   background-color: transparent;
-  margin-right: 12px;
   transition: border-color var(--transition);
   &:focus {
     border-color: var(--accent-color);
@@ -95,6 +130,15 @@
     align-items: center;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @include tablet {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .online-form__btn {
@@ -102,7 +146,7 @@
   gap: 10px;
   width: 200px;
   height: 50px;
-  padding: 10px 28px;
+  // padding: 10px 28px;
 }
 
 .online-form__icon {

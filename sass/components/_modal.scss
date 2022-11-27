@@ -13,8 +13,6 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
   background-color: var(--white-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -30,6 +28,22 @@
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0) rotate(1turn);
     border-radius: 50%;
+  }
+
+  @media screen and (max-width: 479px) {
+    transform: translate(-50%, -40%) scale(1);
+    overflow-y: scroll;
+  }
+
+  @media screen and (min-width: 480px) {
+    transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -52,9 +66,13 @@
 }
 
 .modal__title {
+  @include font(20px, 700, 1.15, null);
   text-align: center;
-  @include font(20px, 700, 1.2, null);
   margin-bottom: 12px;
+
+  @include desktop {
+    @include font(20px, 700, 1.5, null);
+  }
 }
 
 .modal-form__input {
@@ -132,10 +150,20 @@
 }
 
 .modal-form__check-text {
+  flex-wrap: wrap;
   line-height: 1.7;
   color: var(--secondary-text-color);
   @extend %align-list;
   justify-content: center;
+  @include font(12px, null, 1.17, null);
+
+  @include mobile {
+    display: flex;
+  }
+
+  @include desktop {
+    @include font(14px, null, 1.7, null);
+  }
 }
 
 .modal-form__agree {
