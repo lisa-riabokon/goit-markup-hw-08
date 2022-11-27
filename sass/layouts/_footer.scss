@@ -31,7 +31,10 @@
 }
 
 .contacts-list__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .socials__link--footer {
@@ -52,8 +55,11 @@
 }
 
 .footer-wrap {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer-social {

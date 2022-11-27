@@ -55,22 +55,21 @@
             >
           </li>
         </ul>
-        <button type="button" class="menu-open">
-          <svg width="40" height="40">
+        <button type="button" class="menu-open" data-menu-open><svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu-mob"></use>
-          </svg>
-        </button>
+          </svg></button>
       </div>
-      <div class="mob-menu">
-        <nav>
-         <button type="button" class="menu-close">
-          <svg width="40" height="40">
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu__container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close" data-menu-close>
+            <svg width="40" height="40">
             <use href="./images/icons.svg#icon-close-mob"></use>
-          </svg>
-        </button>
-         <ul class="mob-menu-list list">
+          </svg></button>
+        <ul class="mob-menu-list list">
             <li class="mob-menu-list__item">
-              <a href="./index.html" class="mob-menu-list__link link current">Студія</a>
+              <a href="./index.html" class="mob-menu-list__link link mob-menu-list__link--active">Студія</a>
             </li>
             <li class="mob-menu-list__item">
               <a href="./portfolio.html" class="mob-menu-list__link link">Портфоліо</a>
@@ -79,24 +78,27 @@
               <a href="#" class="mob-menu-list__link link">Контакти</a>
             </li>
           </ul>
-        </nav>
-        <ul class="list mob-menu-connect">
+          </div>
+
+          <div class="mob-menu-bottom">
+            <ul class="mob-connect list">
           <li class="mob-connect__item">
-            <a class="mob-connect__link link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="mob-connect__item">
-            <a class="mob-connect__link link" href="tel:+380961111111"
+            <a class="mob-connect__tel link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
           </li>
+          <li class="mob-connect__item">
+            <a class="mob-connect__mail link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
         </ul>
-          <ul class="list mob-soc">
+
+        <ul class="list mob-soc">
                   <li class="mob-soc__item">
                     <a
                       href=""
-                      class="link mob-soc-link"
+                      class="link mob-soc__link"
                       target="_blank"
                       rel="noreferrer noopener"
                     >Instagram</a>
@@ -126,9 +128,8 @@
                       >LinkedIn</a>
                   </li>
                 </ul>
-              </div>
-            </li>
-          </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -196,19 +197,26 @@
           <ul class="list img-list">
             <li class="img-list__item">
               <div class="img-list__wrap">
-                <img src="./images/box1.jpg" alt="десктопні додатки" width="370" height="294" />
+                <img srcset="./images/box1.jpg 1x,
+              ./images/box1-2x.jpg 2x"
+                src="./images/box1.jpg" alt="десктопні додатки" width="370" height="294" />
                 <p class="img-list__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="img-list__item">
               <div class="img-list__wrap">
-                <img src="./images/box2.jpg" alt="мобільні додатки" width="370" height="294" />
+                <img 
+                srcset="./images/box2.jpg 1x,
+              ./images/box2-2x.jpg 2x"
+                src="./images/box2.jpg" alt="мобільні додатки" width="370" height="294" />
                 <p class="img-list__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="img-list__item">
               <div class="img-list__wrap">
-                <img src="./images/box3.jpg" alt="дизайнерські рішення" width="370" height="294" />
+                <img srcset="./images/box3.jpg 1x,
+              ./images/box3-2x.jpg 2x"
+                src="./images/box3.jpg" alt="дизайнерські рішення" width="370" height="294" />
                 <p class="img-list__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -563,7 +571,7 @@
       </section>
     </main>
 
-    <!-- <footer class="section footer">
+    <footer class="section footer">
       <div class="container footer-container">
         <div class="footer-wrap">
           <div class="footer-address">
@@ -636,7 +644,7 @@
       </div>
       </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!------------- модальне вікно ---------->
     <div class="backdrop is-hidden" data-modal>
@@ -700,5 +708,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
