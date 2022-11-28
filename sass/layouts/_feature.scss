@@ -28,8 +28,10 @@
 .icons-list__title {
   @include font(14px, null, 1.14, null);
   text-transform: uppercase;
-
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .icons-list__text {
