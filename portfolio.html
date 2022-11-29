@@ -55,6 +55,72 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu__container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close-mob"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a href="./index.html" class="mob-menu-list__link link mob-menu-list__link--active"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="./portfolio.html" class="mob-menu-list__link link">Портфоліо</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="#" class="mob-menu-list__link link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mob-menu-bottom">
+            <ul class="mob-connect list">
+              <li class="mob-connect__item">
+                <a class="mob-connect__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mob-connect__item">
+                <a class="mob-connect__mail link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="list mob-soc">
+              <li class="mob-soc__item">
+                <a href="" class="link mob-soc__link" target="_blank" rel="noreferrer noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="link mob-soc__link" target="_blank" rel="noreferrer noopener"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="link mob-soc__link" target="_blank" rel="noreferrer noopener"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="link mob-soc__link" target="_blank" rel="noreferrer noopener"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -78,7 +144,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#1">
                 <div class="top-wrap">
-                  <img src="./images/laptop.jpg" alt="laptop" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/laptop.jpg 1x, ./images/laptop-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/laptop-tab.jpg 1x, ./images/laptop-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/laptop-mob.jpg 1x, ./images/laptop-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/laptop-mob.jpg" alt="laptop" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -86,7 +167,7 @@
                   </p>
                 </div>
                 <div class="portfolio-wrap">
-                  <h2 class="card-card-list__title">Технокряк</h2>
+                  <h2 class="card card-list__title">Технокряк</h2>
                   <p class="card-list__text">Веб-сайт</p>
                 </div>
               </a>
@@ -95,12 +176,27 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#2">
                 <div class="top-wrap">
-                  <img
-                    src="./images/basketball.jpg"
-                    alt="basketball-players"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/basketball.jpg 1x, ./images/basketball-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/basketball-tab.jpg 1x, ./images/basketball-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/basketball-mob.jpg 1x, ./images/basketball-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img
+                      src="./images/basketball.jpg"
+                      alt="basketball-players"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur veniam
                     assumenda labore, optio numquam consequuntur libero, cupiditate enim ratione
@@ -120,7 +216,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#3">
                 <div class="top-wrap">
-                  <img src="./images/seafood.jpg" alt="seafood-app" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/seafood.jpg 1x, ./images/seafood-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/seafood-tab.jpg 1x, ./images/seafood-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/seafood-mob.jpg 1x, ./images/seafood-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/seafood-mob.jpg" alt="seafood-app" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex totam voluptates ea
                     consequuntur architecto quia ipsam distinctio quos expedita, impedit magnam
@@ -139,7 +250,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#4">
                 <div class="top-wrap">
-                  <img src="./images/headphones.jpg" alt="headphones" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/headphones.jpg 1x, ./images/headphones-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/headphones-tab.jpg 1x, ./images/headphones-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/headphones-mob.jpg 1x, ./images/headphones-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/headphones-mob.jpg" alt="headphones" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus
                     voluptates cupiditate cum voluptatum quaerat consequatur iste doloribus
@@ -158,7 +284,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#5">
                 <div class="top-wrap">
-                  <img src="./images/boxes.jpg" alt="boxes" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/boxes-tab.jpg 1x, ./images/boxes-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/boxes-mob.jpg 1x, ./images/boxes-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/boxes-mob.jpg" alt="boxes" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minus
                     explicabo a totam doloremque fugit odit quasi optio officiis veritatis at
@@ -177,7 +318,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#6">
                 <div class="top-wrap">
-                  <img src="./images/monitor.jpg" alt="monitor" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/monitor.jpg 1x, ./images/monitor-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/monitor-tab.jpg 1x, ./images/monitor-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/monitor-mob.jpg 1x, ./images/monitor-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/monitor-mob.jpg" alt="monitor" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem distinctio
                     alias molestias aspernatur amet reiciendis corporis magnam laudantium
@@ -198,7 +354,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#7">
                 <div class="top-wrap">
-                  <img src="./images/magazine.jpg" alt="magazine" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/magazine.jpg 1x, ./images/magazine-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/magazine-tab.jpg 1x, ./images/magazine-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/magazine-mob.jpg 1x, ./images/magazine-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/magazine-mob.jpg" alt="magazine" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem distinctio
                     alias molestias aspernatur amet reiciendis corporis magnam laudantium
@@ -217,7 +388,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#8">
                 <div class="top-wrap">
-                  <img src="./images/tag.jpg" alt="label-tag" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/tag.jpg 1x, ./images/tag-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/tag-tab.jpg 1x, ./images/tag-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/tag-mob.jpg 1x, ./images/tag-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/tag-mob.jpg" alt="label-tag" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem distinctio
                     alias molestias aspernatur amet reiciendis corporis magnam laudantium
@@ -236,7 +422,22 @@
             <li class="card-list__item">
               <a class="link card-list__link" href="#9">
                 <div class="top-wrap">
-                  <img src="./images/typing.jpg" alt="typing" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="./images/typing.jpg 1x, ./images/typing-2x.jpg"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/typing-tab.jpg 1x, ./images/typing-tab-2x.jpg"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/typing-mob.jpg 1x, ./images/typing-mob-2x.jpg"
+                      media="(max-width: 480px)"
+                    />
+                    <img src="./images/typing-mob.jpg" alt="typing" width="450" />
+                  </picture>
+
                   <p class="top-wrap__descr">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem distinctio
                     alias molestias aspernatur amet reiciendis corporis magnam laudantium
@@ -260,104 +461,102 @@
 
     <footer class="section footer">
       <div class="container footer-container">
-        <div class="footer-wrap">
-          <div class="footer-address">
-            <a class="logo link footer__logo" href="./index.html" lang="en"
-              >Web<span class="logo--color-light">Studio</span></a
-            >
-            <address class="address">
-              <ul class="list contacts-list">
-                <li class="contacts-list__item">
-                  <a
-                    class="link contacts-list__map"
-                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    >м. Київ, пр-т Лесі Українки, 26</a
-                  >
-                </li>
-                <li class="contacts-list__item">
-                  <a class="link contacts-list__link" href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a
-                  >
-                </li>
-                <li class="contacts-list__item">
-                  <a class="link contacts-list__link" href="tel:+380961111111">+38 096 111 11 11</a>
-                </li>
-              </ul>
-            </address>
-          </div>
-
-          <div class="footer-social">
-            <p class="footer__title">Приєднуйтесь</p>
-            <ul class="list socials">
-              <li class="socials__item">
+        <div class="footer-address">
+          <a class="logo link footer__logo" href="./index.html" lang="en"
+            >Web<span class="logo--color-light">Studio</span></a
+          >
+          <address class="address">
+            <ul class="list contacts-list">
+              <li class="contacts-list__item">
                 <a
-                  href=""
-                  class="link socials__link socials__link--footer"
+                  class="link contacts-list__map"
+                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                   target="_blank"
-                  rel="noreferrer noopener"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Українки, 26</a
                 >
-                  <svg class="socials__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
               </li>
-              <li class="socials__item">
-                <a
-                  href=""
-                  class="link socials__link socials__link--footer"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  ><svg class="socials__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-twitter"></use></svg
-                ></a>
+              <li class="contacts-list__item">
+                <a class="link contacts-list__link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
-              <li class="socials__item">
-                <a
-                  href=""
-                  class="link socials__link socials__link--footer"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  ><svg class="socials__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-facebook"></use></svg
-                ></a>
-              </li>
-              <li class="socials__item">
-                <a
-                  href=""
-                  class="link socials__link socials__link--footer"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  ><svg class="socials__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-linkedin"></use></svg
-                ></a>
+              <li class="contacts-list__item">
+                <a class="link contacts-list__link" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
-          </div>
+          </address>
+        </div>
 
-          <div class="footer-sign-up">
-            <form class="online-form">
-              <label for="online-form__email" class="online-form__title"
-                >Підпишіться на розсилку</label
+        <div class="footer-social">
+          <p class="footer__title">Приєднуйтесь</p>
+          <ul class="list socials">
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__link--footer"
+                target="_blank"
+                rel="noreferrer noopener"
               >
-              <div class="wrap-input">
-                <input
-                  type="email"
-                  name="user-sign-up"
-                  class="online-form__input"
-                  required
-                  id="online-email"
-                  placeholder="E-mail"
-                />
-                <button type="submit" class="btn online-form__btn">
-                  Підписатися<svg class="online-form__icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-send"></use>
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
+                <svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__link--footer"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__link--footer"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__link--footer"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-sign-up">
+          <form class="online-form">
+            <label for="online-form__email" class="online-form__title"
+              >Підпишіться на розсилку</label
+            >
+            <div class="wrap-input">
+              <input
+                type="email"
+                name="user-sign-up"
+                class="online-form__input"
+                required
+                id="online-email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="btn online-form__btn">
+                Підписатися<svg class="online-form__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>

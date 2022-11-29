@@ -1,8 +1,21 @@
 .list-buttons {
   display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  margin-bottom: 40px;
+  @media screen and (max-width: 767px) {
+    max-width: 327px;
+    row-gap: 15px;
+    justify-content: left;
+    margin-bottom: 40px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .list-buttons__btn {
@@ -33,7 +46,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  > .card-list__item {
+}
+
+.card-list__item {
+  width: 100%;
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @include desktop {
     flex-basis: calc((100% - 60px) / 3);
   }
 }
@@ -65,6 +86,8 @@
 .portfolio-wrap {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
+  flex-grow: 1;
 }
 
 .card-list__title {
@@ -79,7 +102,9 @@
 }
 
 .card-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: box-shadow var(--transition);
   &:hover,
