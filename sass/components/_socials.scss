@@ -15,7 +15,6 @@
   border-radius: 50%;
   @extend %align-list;
   justify-content: center;
-  transition: background-color var(--transition);
   &:hover,
   &:focus {
     background-color: var(--accent-color);

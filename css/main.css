@@ -211,7 +211,6 @@ body {
   height: 100%;
   border-radius: 50%;
   justify-content: center;
-  transition: background-color var(--transition);
 }
 .socials__link:hover, .socials__link:focus {
   background-color: var(--accent-color);
