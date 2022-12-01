@@ -46,6 +46,7 @@
 .socials__link--footer {
   background: rgba(255, 255, 255, 0.1);
   fill: var(--white-color);
+  transition: fill var(--transition), background-color var(--transition);
 }
 
 .footer__title,

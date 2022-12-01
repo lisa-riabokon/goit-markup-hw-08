@@ -180,7 +180,10 @@
 .mob-soc {
   display: flex;
   gap: 10px;
-  // justify-content: space-between;
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .mob-soc__item:not(:last-child)::after {

@@ -47,9 +47,5 @@
 .socials__link--team {
   background: var(--white-color);
   fill: var(--icons-color);
-  transition: fill var(--transition);
-  &:hover,
-  &:focus {
-    fill: var(--white-color);
-  }
+  transition: fill var(--transition), background-color var(--transition);
 }

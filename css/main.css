@@ -633,6 +633,12 @@ body {
   display: flex;
   gap: 10px;
 }
+@media screen and (max-width: 480px) {
+  .mob-soc {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .mob-soc__item:not(:last-child)::after {
   content: "";
@@ -680,7 +686,7 @@ body {
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   text-align: center;
   padding: 118px 0;
   margin-left: auto;
@@ -709,7 +715,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .overlay {
-    max-width: 1200px;
+    max-width: 1600px;
+    height: 600px;
     padding: 200px 0;
     background-image: var(--bg-gradient), url(../images/bg-img.jpg);
   }
@@ -852,10 +859,7 @@ body {
 .socials__link--team {
   background: var(--white-color);
   fill: var(--icons-color);
-  transition: fill var(--transition);
-}
-.socials__link--team:hover, .socials__link--team:focus {
-  fill: var(--white-color);
+  transition: fill var(--transition), background-color var(--transition);
 }
 
 .pic-list {
@@ -948,6 +952,7 @@ body {
 .socials__link--footer {
   background: rgba(255, 255, 255, 0.1);
   fill: var(--white-color);
+  transition: fill var(--transition), background-color var(--transition);
 }
 
 .footer__title,
@@ -1170,7 +1175,7 @@ body {
   line-height: 1.6;
   letter-spacing: 0.03em;
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition);
 }
 .card-list__link:hover .top-wrap__descr, .card-list__link:focus .top-wrap__descr {

@@ -21,7 +21,7 @@
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   text-align: center;
   padding: 118px 0;
   margin-left: auto;
@@ -45,7 +45,8 @@
   }
 
   @include desktop {
-    max-width: 1200px;
+    max-width: 1600px;
+    height: 600px;
     padding: 200px 0;
     background-image: var(--bg-gradient), url(../images/bg-img.jpg);
     @include ratio {
